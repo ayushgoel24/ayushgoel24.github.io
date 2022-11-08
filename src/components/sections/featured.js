@@ -6,6 +6,8 @@ import { srConfig } from '@config';
 import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
@@ -114,13 +116,12 @@ const StyledFeaturedImg = styled(Img)`
   vertical-align: middle;
   border-radius: ${theme.borderRadius};
   position: relative;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1) brightness(90%);
+  
+  
   ${media.tablet`
     object-fit: cover;
     width: auto;
     height: 100%;
-    filter: grayscale(100%) contrast(1) brightness(80%);
   `};
 `;
 const StyledImgContainer = styled.a`
@@ -135,18 +136,17 @@ const StyledImgContainer = styled.a`
   ${media.tablet`height: 100%;`};
   ${media.thone`
     grid-column: 1 / -1;
-    opacity: 0.25;
   `};
   &:hover,
   &:focus {
-    background: transparent;
+    
     &:before,
     ${StyledFeaturedImg} {
-      background: transparent;
+      
       filter: none;
     }
     img {
-      background: transparent;
+      
       filter: none;
     }
   }
@@ -161,8 +161,7 @@ const StyledImgContainer = styled.a`
     bottom: 0;
     z-index: 3;
     transition: ${theme.transition};
-    background-color: ${colors.navy};
-    mix-blend-mode: screen;
+    
   }
 `;
 const StyledProject = styled.div`
@@ -204,7 +203,7 @@ const StyledProject = styled.div`
       ${media.tablet`height: 100%;`};
       ${media.thone`
         grid-column: 1 / -1;
-        opacity: 0.25;
+        
       `};
     }
   }
@@ -228,7 +227,7 @@ const Featured = ({ data }) => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, covergif } = frontmatter;
+            const { external, title, tech, github, cover, covergif, covers, covergifs } = frontmatter;
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <StyledContent>
@@ -281,8 +280,19 @@ const Featured = ({ data }) => {
                   target="_blank"
                   rel="nofollow noopener noreferrer">
                     <StyledFeaturedImg fluid={cover && cover.childImageSharp.fluid} alt={title} />
-                    <img src={covergif ? covergif : null} />
+                    {covergif && <img src={covergif ? covergif : null} alt="img" />}
                 </StyledImgContainer>
+
+                {/* <Carousel>
+
+                  {covers && (
+                    {covers.map((lnk, i) => (
+                      <StyledFeaturedImg fluid={cover && cover.childImageSharp.fluid} alt={title} />
+                    ))}
+                    )}
+
+                </Carousel> */}
+                
               </StyledProject>
             );
           })}
