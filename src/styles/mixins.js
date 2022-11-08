@@ -170,6 +170,13 @@ const mixins = {
       }
     }
   `,
+
+  resetList: css`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  `,
+  
 };
 
 export default mixins;
