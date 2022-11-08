@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import { navLinks } from '@config';
+import { profileToNavLinks, profileToResumeLink } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
+import { useLocation } from '@reach/router';
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled.div`
@@ -81,6 +82,12 @@ const ResumeLink = styled.a`
 `;
 
 const Menu = ({ menuOpen, toggleMenu }) => {
+  
+  const location = useLocation();
+  const profile = location.pathname.replaceAll("/", "");
+  const navLinks = profileToNavLinks[profile];
+  const resumeLink = profileToResumeLink[profile];
+
   const handleMenuClick = e => {
     const target = e.target;
     const isLink = target.hasAttribute('href');
@@ -107,7 +114,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
                 </NavListItem>
               ))}
           </NavList>
-          <ResumeLink href="/resume.pdf" target="_blank" rel="nofollow noopener noreferrer">
+          <ResumeLink href={resumeLink} target="_blank" rel="nofollow noopener noreferrer">
             Resume
           </ResumeLink>
         </NavLinks>
