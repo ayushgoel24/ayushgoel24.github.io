@@ -3,17 +3,19 @@ import PropTypes from 'prop-types';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import { theme, mixins, media, Section, Heading } from '@styles';
 // import {
 //   useWindowSize,
 //   useWindowWidth,
 //   useWindowHeight
 // } from '@react-hook/window-size'
+// import { StyledFeaturedImg } from '@components/sections/skills'
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
   position: relative;
-  max-width: 700px;
+  max-width: 800px;
 `;
 const StyledTabs = styled.div`
   display: flex;
@@ -159,6 +161,16 @@ const StyledEducationDetails = styled.h5`
   }
 `;
 
+const StyledFeaturedImg = styled(Img)`
+  max-width: 100%;
+  max-height: 100%;
+  width: 75px;
+  height: 75px;
+  vertical-align: middle;
+  border-radius: ${theme.borderRadius};
+  position: relative;
+`;
+
 const Education = ({ data }) => {
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
@@ -246,7 +258,7 @@ const Education = ({ data }) => {
         {data &&
           data.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { school, shortname, programme, score, location, url, range } = frontmatter;
+            const { school, shortname, programme, score, location, url, range, logo } = frontmatter;
             return (
               <StyledTabContent
                 key={i}
@@ -256,19 +268,37 @@ const Education = ({ data }) => {
                 aria-labelledby={`tab-${i}`}
                 tabIndex={activeTabId === i ? '0' : '-1'}
                 hidden={activeTabId !== i}>
-                <StyledEducationTitle>
-                  <StyledCompany>
-                    <a href={url} target="_blank" rel="nofollow noopener noreferrer">
-                      {school}
-                    </a>
-                  </StyledCompany>
-                  <br />
-                  <span>{programme}</span>
-                </StyledEducationTitle>
-                <StyledEducationDetails>
-                  <span>{range}</span><br /><br />
-                  <span>{score}</span>
-                </StyledEducationDetails>
+                <div style={{
+                  display:"flex",
+                  // justifyContent:"space-between"
+                }}>
+                  <div style={{
+                    display:"flex",
+                    justifyContent:"flex-start",
+                    marginRight:"1.5rem",
+                  }}>
+                    <StyledFeaturedImg
+                      fluid={logo.childImageSharp.fluid}
+                      alt="logo"
+                    />
+                  </div>
+                  <div>
+                    <StyledEducationTitle>
+                      <StyledCompany>
+                        <a href={url} target="_blank" rel="nofollow noopener noreferrer">
+                          {school}
+                        </a>
+                      </StyledCompany>
+                      <br />
+                      <span>{programme}</span>
+                    </StyledEducationTitle>
+                    <StyledEducationDetails>
+                      <span>{range}</span><br /><br />
+                      <span>{score}</span>
+                    </StyledEducationDetails>
+                  </div>
+
+                </div>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
               </StyledTabContent>
             );
