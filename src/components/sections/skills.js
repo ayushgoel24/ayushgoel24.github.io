@@ -176,7 +176,7 @@ const StyledProject = styled.div`
     }
   }
 `;
-const StyledFeaturedImg = styled(Img)`
+export const StyledFeaturedImg = styled(Img)`
   width: 75%;
   max-width: 100%;
   vertical-align: middle;
