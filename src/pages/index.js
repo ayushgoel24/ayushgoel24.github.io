@@ -34,7 +34,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   {
-    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
+    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/default/" } }) {
       edges {
         node {
           frontmatter {
@@ -47,7 +47,8 @@ export const pageQuery = graphql`
         }
       }
     }
-    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+
+    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/default/" } }) {
       edges {
         node {
           frontmatter {
@@ -65,6 +66,7 @@ export const pageQuery = graphql`
         }
       }
     }
+
     jobs: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/jobs/" }
@@ -94,6 +96,7 @@ export const pageQuery = graphql`
         }
       }
     }
+
     education: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/education/" }
@@ -111,14 +114,22 @@ export const pageQuery = graphql`
             location
             range
             url
+            logo{
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 90) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
           }
           html
         }
       }
     }
+
     featured: allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "/featured/" }
+        fileAbsolutePath: { regex: "/featured/default/" }
         frontmatter: { showInFeatured: { eq: true } }
       }
       sort: { fields: [frontmatter___position], order: ASC }
@@ -138,15 +149,24 @@ export const pageQuery = graphql`
             tech
             github
             external
+            covers {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            covergifs
           }
           html
         }
       }
     }
+
     projects: allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "/projects/" }
-        frontmatter: { showInProjects: { eq: true } }
+        fileAbsolutePath: { regex: "/featured/default/" }
+        frontmatter: { showInProjects: { eq: true }, showInFeatured: { eq: false } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -162,9 +182,10 @@ export const pageQuery = graphql`
         }
       }
     }
+
     certifications: allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "/certifications/" }
+        fileAbsolutePath: { regex: "/certifications/default/" }
         frontmatter: { showInCertifications: { eq: true } }
       }
       sort: { fields: [frontmatter___priority], order: ASC }
@@ -183,6 +204,7 @@ export const pageQuery = graphql`
         }
       }
     }
+
     skills: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/skills/" }
@@ -207,6 +229,7 @@ export const pageQuery = graphql`
         }
       }
     }
+
     contact: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contact/" } }) {
       edges {
         node {
