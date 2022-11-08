@@ -7,6 +7,7 @@ programme: 'Master of Science in Robotics'
 location: 'Philadelphia, Pennsylvania'
 range: 'August 2022 - May 2024'
 url: 'https://www.upenn.edu/'
+logo: 'upenn.png'
 showInEducation: true
 ---
 

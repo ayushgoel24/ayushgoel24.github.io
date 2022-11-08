@@ -7,6 +7,7 @@ score: 'GPA: 9.29/10'
 location: 'Punjab, India'
 range: 'July 2014 - June 2018'
 url: 'https://www.thapar.edu/'
+logo: 'ti.png'
 showInEducation: true
 ---
 
@@ -15,7 +16,7 @@ showInEducation: true
 - **Awards:** Certificate of Merit for 3 consecutive years
 
 - **Achievements:** 3<sup>RD</sup> rank in Undergrad, Merit-based Scholarships for all 4 years
-<!-- 
+<!--
 - Certified in Agile, [DevOps](https://drive.google.com/file/d/133QWdIhw9KI0YMKs1SPI_6VQ1ENtMiCe/view?usp=sharing), and MS360 architecture.
 
 - Declared as Winner in Design Thinking Hackathon on Benovative Platform.
