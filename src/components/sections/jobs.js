@@ -181,8 +181,10 @@ const StyledTechList = styled.ul`
 `;
 
 const StyledFeaturedImg = styled(Img)`
-  width: 75%;
   max-width: 100%;
+  max-height: 100%;
+  width: 75px;
+  height: 75px;
   vertical-align: middle;
   border-radius: ${theme.borderRadius};
   position: relative;
@@ -267,7 +269,22 @@ const Jobs = ({ data }) => {
                 aria-labelledby={`tab-${i}`}
                 tabIndex={activeTabId === i ? '0' : '-1'}
                 hidden={activeTabId !== i}>
-                <StyledJobTitle>
+                  <div style={{
+                  display:"flex",
+                  // justifyContent:"space-between"
+                }}>
+                  <div style={{
+                    display:"flex",
+                    justifyContent:"flex-start",
+                    marginRight:"1.5rem",
+                  }}>
+                    <StyledFeaturedImg
+                      fluid={logo.childImageSharp.fluid}
+                      alt="logo"
+                    />
+                  </div>
+                  <div>
+                  <StyledJobTitle>
                   <StyledCompany>
                     <a href={url} target="_blank" rel="nofollow noopener noreferrer">
                       {company}
@@ -279,6 +296,8 @@ const Jobs = ({ data }) => {
                 <StyledJobDetails>
                   <span>{range}</span>
                 </StyledJobDetails>
+                  </div>
+                </div>
                 <div style={{textAlign: "justify"}} dangerouslySetInnerHTML={{ __html: html }} />
                 {tech && (
                     <StyledTechList>
