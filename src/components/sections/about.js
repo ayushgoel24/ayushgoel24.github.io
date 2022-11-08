@@ -62,8 +62,7 @@ const StyledPic = styled.div`
 `;
 const StyledAvatar = styled(Img)`
   position: relative;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1);
+  filter: none;
   border-radius: ${theme.borderRadius};
   transition: ${theme.transition};
 `;
@@ -78,12 +77,13 @@ const StyledAvatarLink = styled.a`
   &:focus {
     background: transparent;
     &:after {
-      top: 15px;
-      left: 15px;
+      top: -8px;
+      left: -8px;
+      width: 105%;
+      height: 105%;
     }
     ${StyledAvatar} {
       filter: none;
-      mix-blend-mode: normal;
     }
   }
   &:before,
