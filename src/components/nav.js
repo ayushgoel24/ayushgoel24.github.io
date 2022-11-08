@@ -4,11 +4,12 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { throttle } from '@utils';
-import { navLinks, navHeight } from '@config';
+import { profileToNavLinks, profileToResumeLink, navHeight } from '@config';
 import { Menu } from '@components';
 import { IconLogo } from '@components/icons';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
+import { useLocation } from '@reach/router';
 const { colors, fontSizes, fonts, loaderDelay } = theme;
 
 const StyledContainer = styled.header`
@@ -231,7 +232,15 @@ class Nav extends Component {
 
   render() {
     const { isMounted, menuOpen, scrollDirection } = this.state;
-    const { isHome } = this.props;
+    const { isHome, location } = this.props;
+    console.log("nav location.pathname: ",location.pathname);
+    const isSdeProfile = location.pathname.startsWith("/sde")
+    console.log("nav isSdeProfile: ",isSdeProfile);
+    
+    const profile = location.pathname.replaceAll("/", "");
+    console.log("nav profile: ",profile);
+    const navLinks = profileToNavLinks[profile];
+    const resumeLink = profileToResumeLink[profile];
     const timeout = isHome ? loaderDelay : 0;
     const fadeClass = isHome ? 'fade' : '';
     const fadeDownClass = isHome ? 'fadedown' : '';
@@ -294,7 +303,7 @@ class Nav extends Component {
                 <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                   <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
                     <StyledResumeButton
-                      href="/resume.pdf"
+                      href={resumeLink}
                       target="_blank"
                       rel="nofollow noopener noreferrer">
                       Resume
