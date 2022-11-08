@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Ayush Goel | Robotics Engineer',
+  siteTitle: 'Ayush Goel',
   siteDescription:
     'Ayush Goel is a Senior Software Development Engineer at Unicommerce eSolutions Pvt. Ltd., who loves learning new things and helping tech beginners.',
   siteKeywords:
@@ -23,36 +23,71 @@ module.exports = {
     }
   ],
 
-  navLinks: [
-    {
-      name: 'About',
-      url: '/#about',
-    },
-    {
-      name: 'Experience',
-      url: '/#jobs',
-    },
-    {
-      name: 'Education',
-      url: '/#education',
-    },
-    {
-      name: 'Projects',
-      url: '/#projects',
-    },
-    {
-      name: 'Skills',
-      url: '/#skills',
-    },
-    {
-      name: 'Certifications',
-      url: '/#certifications'
-    },
-    {
-      name: 'Contact',
-      url: '/#contact',
-    },
-  ],
+  profileToNavLinks : {
+    "": [
+      {
+        name: 'About',
+        url: '/#about',
+      },
+      {
+        name: 'Experience',
+        url: '/#jobs',
+      },
+      {
+        name: 'Education',
+        url: '/#education',
+      },
+      {
+        name: 'Projects',
+        url: '/#projects',
+      },
+      {
+        name: 'Skills',
+        url: '/#skills',
+      },
+      {
+        name: 'Certifications',
+        url: '/#certifications'
+      },
+      {
+        name: 'Contact',
+        url: '/#contact',
+      },
+    ],
+  "sde":[{
+    name: 'About',
+    url: '/sde/#about',
+  },
+  {
+    name: 'Experience',
+    url: '/sde/#jobs',
+  },
+  {
+    name: 'Education',
+    url: '/sde/#education',
+  },
+  {
+    name: 'Projects',
+    url: '/sde/#projects',
+  },
+  {
+    name: 'Skills',
+    url: '/sde/#skills',
+  },
+  {
+    name: 'Certifications',
+    url: '/sde/#certifications'
+  },
+  {
+    name: 'Contact',
+    url: '/sde/#contact',
+  }]
+  },
+
+  profileToResumeLink : {
+    "" : "/AyushGoel.pdf",
+    "sde" : "/AyushGoel_SE.pdf"
+  },
 
   navHeight: 100,
 
