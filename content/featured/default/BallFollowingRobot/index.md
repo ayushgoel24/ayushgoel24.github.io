@@ -1,5 +1,5 @@
 ---
-position: '5'
+position: '8'
 title: 'Object Following Robot using ROS and OpenCV'
 cover: './cover.png'
 github: 'https://github.com/ayushgoel24/TargetFollower'
