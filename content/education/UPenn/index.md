@@ -3,7 +3,7 @@ date: '2022-08-22'
 school: 'University of Pennsylvania, GRASP Lab'
 shortname: 'UPenn'
 programme: 'Master of Science in Robotics'
-# score: 'GPA: 9.29/10'
+score: 'GPA: 3.9/4.0'
 location: 'Philadelphia, Pennsylvania'
 range: 'August 2022 - May 2024'
 url: 'https://www.upenn.edu/'
@@ -11,7 +11,7 @@ logo: 'upenn.png'
 showInEducation: true
 ---
 
-- **Relevant Coursework:** Machine Perception, Computer Vision, Machine Learning
+- **Relevant Coursework:** Deep Learning, Machine Perception, Computer Vision, Machine Learning, Advanced Robotics, Operating Systems, Reinforcement Learning
 
 <!--
 - Certified in Agile, [DevOps](https://drive.google.com/file/d/133QWdIhw9KI0YMKs1SPI_6VQ1ENtMiCe/view?usp=sharing), and MS360 architecture.
