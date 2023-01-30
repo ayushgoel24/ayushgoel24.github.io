@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Ayush Goel',
+  siteTitle: 'Ayush Goel - My Home Page',
   siteDescription:
     'Ayush Goel is a Senior Software Development Engineer at Unicommerce eSolutions Pvt. Ltd., who loves learning new things and helping tech beginners.',
   siteKeywords:
@@ -20,11 +20,11 @@ module.exports = {
     {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/ayushsgoel/',
-    }
+    },
   ],
 
-  profileToNavLinks : {
-    "": [
+  profileToNavLinks: {
+    '': [
       {
         name: 'About',
         url: '/#about',
@@ -47,46 +47,48 @@ module.exports = {
       },
       {
         name: 'Certifications',
-        url: '/#certifications'
+        url: '/#certifications',
       },
       {
         name: 'Contact',
         url: '/#contact',
       },
     ],
-  "sde":[{
-    name: 'About',
-    url: '/sde/#about',
-  },
-  {
-    name: 'Experience',
-    url: '/sde/#jobs',
-  },
-  {
-    name: 'Education',
-    url: '/sde/#education',
-  },
-  {
-    name: 'Projects',
-    url: '/sde/#projects',
-  },
-  {
-    name: 'Skills',
-    url: '/sde/#skills',
-  },
-  {
-    name: 'Certifications',
-    url: '/sde/#certifications'
-  },
-  {
-    name: 'Contact',
-    url: '/sde/#contact',
-  }]
+    sde: [
+      {
+        name: 'About',
+        url: '/sde/#about',
+      },
+      {
+        name: 'Experience',
+        url: '/sde/#jobs',
+      },
+      {
+        name: 'Education',
+        url: '/sde/#education',
+      },
+      {
+        name: 'Projects',
+        url: '/sde/#projects',
+      },
+      {
+        name: 'Skills',
+        url: '/sde/#skills',
+      },
+      {
+        name: 'Certifications',
+        url: '/sde/#certifications',
+      },
+      {
+        name: 'Contact',
+        url: '/sde/#contact',
+      },
+    ],
   },
 
-  profileToResumeLink : {
-    "" : "/AyushGoel.pdf",
-    "sde" : "/AyushGoel_SE.pdf"
+  profileToResumeLink: {
+    '': '/AyushGoel.pdf',
+    sde: '/AyushGoel_SE.pdf',
   },
 
   navHeight: 100,
@@ -98,7 +100,7 @@ module.exports = {
   },
 
   // srConfig: (delay = 200) => ({
-    srConfig: (delay = 200, viewFactor = 0.25) => ({
+  srConfig: (delay = 200, viewFactor = 0.25) => ({
     origin: 'bottom',
     distance: '20px',
     duration: 500,
