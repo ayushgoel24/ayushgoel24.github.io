@@ -180,8 +180,6 @@ const Education = ({ data }) => {
 
   const revealContainer = useRef(null);
   useEffect(() => sr.reveal(revealContainer.current, srConfig(200, viewFactor)), []);
-  console.log("viewFactor : ",viewFactor)
-  console.log("navigator.userAgent : ",navigator.userAgent)
   // useEffect(()=>{
   //   console.log("height : ",height)
   //   if (
