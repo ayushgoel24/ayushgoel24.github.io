@@ -1,11 +1,11 @@
 ---
 title: 'Hi, my name is'
 name: 'Ayush Goel'
-subtitle: 'Robotics | Computer Vision | Machine Learning'
+subtitle: 'Robotics | Perception | Robot Learning'
 buttonText: 'Connect with Me!'
 ---
 
-I am a graduate student studying Robotics Engineering from University of Pennsylvania, specializing in Computer Vision and Perception.
+I am a graduate student studying Robotics Engineering from University of Pennsylvania, specializing in Perception and Robot Learning.
 
 <!-- I'm an India based developer with a goal-driven creative mindset and passion for learning and innovating.
 
