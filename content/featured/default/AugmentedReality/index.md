@@ -1,7 +1,7 @@
 ---
-position: '3'
+position: '6'
 title: 'Augmented Reality'
-cover: './input_image.jpg'
+cover: './cover.jpg'
 covergif: '/augmented_reality.gif'
 github: 'https://github.com/ayushgoel24/AugmentedReality'
 cta: ''
