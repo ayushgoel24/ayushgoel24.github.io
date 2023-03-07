@@ -148,15 +148,9 @@ export const pageQuery = graphql`
             covergif
             tech
             github
+            drive
             external
-            covers {
-              childImageSharp {
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-            covergifs
+            youtube
           }
           html
         }
