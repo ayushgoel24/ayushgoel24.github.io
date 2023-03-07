@@ -227,7 +227,7 @@ const Featured = ({ data }) => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, covergif, covers, covergifs } = frontmatter;
+            const { external, title, tech, github, cover, covergif, covers, covergifs, drive, youtube } = frontmatter;
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <StyledContent>
@@ -263,6 +263,15 @@ const Featured = ({ data }) => {
                         <FormattedIcon name="GitHub" />
                       </a>
                     )}
+                    {drive && (
+                      <a
+                        href={drive}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        aria-label="Google Drive Link">
+                        <FormattedIcon name="Drive" />
+                      </a>
+                    )}
                     {external && (
                       <a
                         href={external}
@@ -270,6 +279,15 @@ const Featured = ({ data }) => {
                         rel="nofollow noopener noreferrer"
                         aria-label="External Link">
                         <FormattedIcon name="External" />
+                      </a>
+                    )}
+                    {youtube && (
+                      <a
+                        href={youtube}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        aria-label="Youtube Link">
+                        <FormattedIcon name="Youtube" />
                       </a>
                     )}
                   </StyledLinkWrapper>
