@@ -5,7 +5,8 @@ cover: './cover.jpeg'
 covergif: '/RoboMuse3XT.gif'
 # github: 'https://github.com/bchiang7/spotify-profile'
 drive: 'https://drive.google.com/drive/folders/1d9j7AjqBtNM0PFZCWUwWRAdIs6ovNKb0?usp=sharing'
-external: 'https://drive.google.com/drive/folders/1d9j7AjqBtNM0PFZCWUwWRAdIs6ovNKb0?usp=sharing'
+# external: 'https://drive.google.com/drive/folders/1d9j7AjqBtNM0PFZCWUwWRAdIs6ovNKb0?usp=sharing'
+youtube: 'https://drive.google.com/drive/folders/1d9j7AjqBtNM0PFZCWUwWRAdIs6ovNKb0?usp=sharing'
 tech:
   - Python
   - OpenCV
