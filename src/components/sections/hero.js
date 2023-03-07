@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { profileToOtherProfileLinks } from '@config';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { email } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section } from '@styles';
+import { useLocation } from '@reach/router';
 const { colors, fontSizes, fonts, navDelay, loaderDelay } = theme;
 
 const StyledContainer = styled(Section)`
@@ -55,9 +57,18 @@ const StyledEmailLink = styled.a`
   ${mixins.bigButton};
   margin-top: 50px;
 `;
+const StyledProfileLinks = styled.a`
+  ${mixins.bigButton};
+  margin-top: 50px;
+  margin-right: 10px;
+  float: right;
+`;
 
 const Hero = ({ data }) => {
   const [isMounted, setIsMounted] = useState(false);
+
+  const location = useLocation();
+  const currentProfile = location.pathname.replaceAll('/', '');
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
@@ -87,13 +98,36 @@ const Hero = ({ data }) => {
     </div>
   );
 
-  const items = [one, two, three, four, five];
+  const otherProfiles = []
+  for (const [key, value] of Object.entries(profileToOtherProfileLinks)) {
+    if (key !== currentProfile) {
+      otherProfiles.push(<StyledProfileLinks href={`${value['link']}`}>{value['message']}</StyledProfileLinks>);
+    }
+  }
+  
+  // const six = () => (
+  //   otherProfiles.map((profile, i) => (
+  //     <div style={{ transitionDelay: '500ms' }}>
+  //       <StyledEmailLink2 href={`${profile['link']}`}>{profile['message']}</StyledEmailLink2>
+  //     </div>
+  //   ))
+  // );
 
+  const six2 = () => (
+    <div style={{ transitionDelay: '500ms' }}>
+      {otherProfiles}
+    </div>
+  );
+
+  const items = [one, two, three, four, five, six2];
+  
   return (
     <StyledContainer>
       <TransitionGroup component={null}>
+        
         {isMounted &&
           items.map((item, i) => (
+            
             <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
               {item}
             </CSSTransition>
