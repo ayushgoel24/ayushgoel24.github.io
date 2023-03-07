@@ -48,6 +48,7 @@ const StyledContent = styled.div`
 `;
 
 const Layout = ({ children, location }) => {
+  // controls loader
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 

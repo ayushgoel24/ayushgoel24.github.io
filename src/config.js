@@ -12,15 +12,20 @@ module.exports = {
   location: 'Philadelphia, Pennsylvania',
   email: 'ayush.goel2427@gmail.com',
   github: 'https://github.com/ayushgoel24',
+  linkedin: 'https://www.linkedin.com/in/ayushsgoel/',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/ayushgoel24/',
+      url: 'https://github.com/ayushgoel24',
     },
     {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/ayushsgoel/',
     },
+    {
+      name: 'LeetCode',
+      url: 'https://leetcode.com/AyushGoel24/'
+    }
   ],
 
   profileToNavLinks: {
@@ -89,6 +94,17 @@ module.exports = {
   profileToResumeLink: {
     '': '/AyushGoel.pdf',
     sde: '/AyushGoel_SE.pdf',
+  },
+
+  profileToOtherProfileLinks: {
+    '': {
+      message: 'See my Perception profile',
+      link: '/'
+    },
+    sde: {
+      message: 'See my Software profile',
+      link: '/sde'
+    },
   },
 
   navHeight: 100,
