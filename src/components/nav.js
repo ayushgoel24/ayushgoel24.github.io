@@ -233,12 +233,12 @@ class Nav extends Component {
   render() {
     const { isMounted, menuOpen, scrollDirection } = this.state;
     const { isHome, location } = this.props;
-    console.log("nav location.pathname: ",location.pathname);
+    // console.log("nav location.pathname: ",location.pathname);
     const isSdeProfile = location.pathname.startsWith("/sde")
-    console.log("nav isSdeProfile: ",isSdeProfile);
+    // console.log("nav isSdeProfile: ",isSdeProfile);
     
     const profile = location.pathname.replaceAll("/", "");
-    console.log("nav profile: ",profile);
+    // console.log("nav profile: ",profile);
     const navLinks = profileToNavLinks[profile];
     const resumeLink = profileToResumeLink[profile];
     const timeout = isHome ? loaderDelay : 0;
