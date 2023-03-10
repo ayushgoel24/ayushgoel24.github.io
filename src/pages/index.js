@@ -151,6 +151,7 @@ export const pageQuery = graphql`
             drive
             external
             youtube
+            tags
           }
           html
         }
