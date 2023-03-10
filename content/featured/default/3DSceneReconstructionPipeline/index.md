@@ -9,6 +9,8 @@ tech:
   - Stereo
 showInFeatured: true
 showInProjects: true
+tags:
+  - Computer Vision
 ---
 
 Implemented 2-view and multi-view stereo algorithms to convert multiple 2D views into 3D reconstruction. <br><br>

@@ -14,6 +14,8 @@ covers:
   - ./input_image.jpg
 covergifs:
   - /augmented_reality.gif
+tags:
+  - Computer Vision
 ---
 
 Used Tracking and Pose Estimation to place several virtual object models in real world by estimating camera poses using Perspective-N-Point; and Persepective-three-point & Procrustes problem. <br /><br />

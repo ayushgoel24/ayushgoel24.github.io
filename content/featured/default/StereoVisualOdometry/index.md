@@ -11,6 +11,8 @@ tech:
   - SLAM
 showInFeatured: true
 showInProjects: true
+tags:
+  - Computer Vision
 ---
 
 Extracted features from stereo images using GFTT and performed triangulation for 3D point location. <br><br>

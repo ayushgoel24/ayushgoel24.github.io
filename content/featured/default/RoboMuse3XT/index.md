@@ -14,6 +14,10 @@ tech:
   - Solidworks
 showInFeatured: true
 showInProjects: true
+tags:
+  - Robotics
+  - Computer Vision
+  - Motion Planning
 ---
 
 - Developed a Semi-Autonomous mobile robot from scratch capable of being operated remotely or autonomously in a pre-defined path.<br><br>

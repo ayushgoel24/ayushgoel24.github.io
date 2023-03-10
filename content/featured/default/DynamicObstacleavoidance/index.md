@@ -10,6 +10,9 @@ tech:
   - PyTorch
 showInFeatured: true
 showInProjects: true
+tags:
+  - Deep Learning
+  - Motion Planning
 ---
 
 Implemented Social LSTM, OLSTM and GRU for predicting pedestrians’ trajectory. <br><br>

@@ -9,6 +9,8 @@ tech:
   - ROS
 showInFeatured: true
 showInProjects: true
+tags:
+  - Robotics
 ---
 
 Developed a Raspberry Pi-based robot that chases an object using PID control and a combination of sensory data (Camera and LiDAR). <br /><br />

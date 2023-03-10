@@ -10,6 +10,9 @@ tech:
   - Drivable Area Segmentation
 showInFeatured: true
 showInProjects: true
+tags:
+  - Computer Vision
+  - Deep Learning
 ---
 
 Performed Instance Segmentation for detecting vehicles and YoloP for Drivable Area Identification. <br><br>

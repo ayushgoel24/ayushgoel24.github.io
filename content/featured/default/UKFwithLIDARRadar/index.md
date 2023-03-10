@@ -11,6 +11,9 @@ tech:
   - SLAM
 showInFeatured: true
 showInProjects: true
+tags:
+  - Sensor Fusion
+  - State Estimation
 ---
 
 Extracted features from stereo images using GFTT and performed triangulation for 3D point location. <br><br>

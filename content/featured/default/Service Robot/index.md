@@ -13,6 +13,10 @@ tech:
   - Soliworks
 showInFeatured: true
 showInProjects: true
+tags:
+  - Robotics
+  - Computer Vision
+  - Motion Planning
 ---
 
 Developed and installed a 4 DoF Robotic arm with a payload capacity of 300 gm on RoboMuse3XT. <br><br>

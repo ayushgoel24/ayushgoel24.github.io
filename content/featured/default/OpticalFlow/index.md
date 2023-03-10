@@ -12,6 +12,8 @@ tech:
   - scikit-learn
 showInFeatured: true
 showInProjects: true
+tags:
+  - Computer Vision
 ---
 
 This project implements the Optical Flow by tracking pre-initialized bounding boxes in a video. The objective is to track the movement of the object of interest as the video plays.<br /><br />
