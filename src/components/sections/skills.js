@@ -237,7 +237,6 @@ const Skills = ({ data }) => {
     if (!skillsMap[container]) skillsMap[container] = [];
     skillsMap[container].push({ name, logo });
   });
-  console.log('skillsMap : ', skillsMap);
 
   return (
     <StyledContainer id="skills" ref={revealContainer}>
