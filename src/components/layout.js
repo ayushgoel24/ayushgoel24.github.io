@@ -57,9 +57,15 @@ const Layout = ({ children, location }) => {
       return;
     }
     if (location.hash) {
-      const id = location.hash.substring(1); // location.hash without the '#'
+      let id = location.hash.substring(1); // location.hash without the '#'
+      if (id.includes('?')) {
+        const idParts = id.split('?');
+        id = idParts[0];
+      }
+
       setTimeout(() => {
         const el = document.getElementById(id);
+
         if (el) {
           el.scrollIntoView();
           el.focus();
