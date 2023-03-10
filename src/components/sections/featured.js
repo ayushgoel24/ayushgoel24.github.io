@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
+import { Link } from 'gatsby';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { FormattedIcon } from '@components/icons';
@@ -8,7 +10,9 @@ import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { useLocation } from '@reach/router';
 const { colors, fontSizes, fonts } = theme;
+
 
 const StyledContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -209,25 +213,98 @@ const StyledProject = styled.div`
   }
 `;
 
-const Featured = ({ data }) => {
-  const featuredProjects = data.filter(({ node }) => node);
+const StyledList = styled.ol`
+  ${mixins.flexBetween};
+  padding: 0;
+  margin: 0;
+  list-style: none;
+`;
+const StyledListItem = styled.li`
+  margin: 0 10px;
+  position: relative;
+  font-size: ${fontSizes.smish};
+  counter-increment: item 1;
+  &:before {
+    content: '0' counter(item) '.';
+    text-align: right;
+    color: ${colors.green};
+    font-size: ${fontSizes.xs};
+  }
+`;
+const StyledListLink = styled(Link)`
+  padding: 12px 10px;
+`;
 
-  const revealTitle = useRef(null);
-  const revealProjects = useRef([]);
-  useEffect(() => {
-    sr.reveal(revealTitle.current, srConfig());
-    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
-  }, []);
+const Featured = ({ data }) => {
+    const featuredProjects = data.filter(({ node }) => node);
+  
+    // For each of the node from the GRAPHQL query, we are extracting each of the featured project details
+    // for every project we are adding each of them into `projectCategoryToProjectDetails` based on their tags
+    const projectCategoryToProjectDetails = {};
+    let allTags;
+    allTags = new Set();
+    allTags.add( "All" );
+
+    projectCategoryToProjectDetails["All"] = [];
+    featuredProjects.map(({ node }, i) => {
+        const { frontmatter, html } = node;
+        const { external, title, tech, github, cover, covergif, covers, covergifs, drive, youtube, tags } = frontmatter;
+        projectCategoryToProjectDetails["All"].push({ node });
+        tags.map((tag, i) => {
+            allTags.add( tag );
+            if (!projectCategoryToProjectDetails[tag]) projectCategoryToProjectDetails[tag] = [];
+            projectCategoryToProjectDetails[tag].push({ node });
+        });
+    });
+
+    allTags = Array.from(allTags);
+
+    const location = useLocation();
+    let currentTag;
+
+    if ( location.hash.includes( "?") ) {
+        const queryParams = new URLSearchParams( "?" + location.hash.split('?')[1] );
+        currentTag = queryParams.get( "tag" );
+        if ( !currentTag ) {
+            currentTag = "All";
+        } 
+    } else {
+        currentTag = "All";
+    }
+
+    const selectedProjects = projectCategoryToProjectDetails[ currentTag ];
+
+    const revealTitle = useRef(null);
+    const revealProjects = useRef([]);
+    useEffect(() => {
+        sr.reveal(revealTitle.current, srConfig());
+        revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+    }, []);
 
   return (
     <StyledContainer id="projects">
-      <Heading ref={revealTitle}>Some Things I&apos;ve Built</Heading>
+        <Heading ref={revealTitle}>Some Things I&apos;ve Built</Heading>
 
+        {allTags && (
+            <StyledList>
+                { allTags.map( (tag, index) => (
+                    // <StyledListLink to={ tag === "All" ? "/#projects" : "/#projects?tag=" + tag }>
+                    //     { tag }
+                    // </StyledListLink>
+                    <StyledListLink to={ "/#projects?tag=" + tag }>
+                        { tag }
+                    </StyledListLink>
+                ))}
+            </StyledList>
+        )}
+    
       <div>
-        {featuredProjects &&
-          featuredProjects.map(({ node }, i) => {
+        {selectedProjects &&
+          selectedProjects.map(({ node }, i) => {
+            
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, covergif, covers, covergifs, drive, youtube } = frontmatter;
+            const { external, title, tech, github, cover, covergif, covers, covergifs, drive, youtube, tags } = frontmatter;
+            
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <StyledContent>
