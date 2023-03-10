@@ -250,7 +250,7 @@ const Featured = ({ data }) => {
         const { frontmatter, html } = node;
         const { external, title, tech, github, cover, covergif, covers, covergifs, drive, youtube, tags } = frontmatter;
         projectCategoryToProjectDetails["All"].push({ node });
-        tags.map((tag, i) => {
+        tags && tags.map((tag, i) => {
             allTags.add( tag );
             if (!projectCategoryToProjectDetails[tag]) projectCategoryToProjectDetails[tag] = [];
             projectCategoryToProjectDetails[tag].push({ node });
