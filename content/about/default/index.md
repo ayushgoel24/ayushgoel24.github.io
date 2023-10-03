@@ -5,18 +5,14 @@ skills:
   - A
 ---
 
-Hello!
+Greetings! I'm Ayush Goel, a dedicated Robotics and Software Engineer currently deepening my expertise at the University of Pennsylvania with a Master's in Robotics. My academic endeavors have endowed me with profound insights into Deep Learning, Machine Learning, Computer Vision, and Advanced Robotics. This knowledge is further enriched by my experience as a Teaching Assistant for courses like Data Structures, Algorithms and Software Design, and Operating Systems.
 
-I am <b>Ayush Goel</b>, a graduate student in <b>Robotics</b> at the <b>University of Pennsylvania</b>.
+Before this academic pursuit, I dedicated 4 years as a Senior Software Engineer, leading critical projects and mentoring a vibrant team of Software Engineers. My collaboration with Engineering and Business leaders played a crucial role in shaping the product and engineering roadmap.
 
-I have previously worked as a <b>Senior Software Development Engineer</b> for 4 years, during which I have led several critical projects. I have also mentored and managed a team of Software Engineers, and was in regular discussions with Engineering and Business leaders for product and engineering roadmap.
+Professionally, I've had the privilege of working across diverse geographies and sectors. My role at TDK InvenSense in San Jose, California, saw me integrating state-of-the-art technologies for mobile robots, from integrating ROS2 Nav2-based navigation pipelines to developing object detection pipelines using NVIDIA Issac. My contributions at Unicommerce eSolutions in Gurugram and Capgemini India in Pune further showcase my versatility and leadership in the software domain. As a Senior Software Engineer, I led teams, pioneered microservice architectures, and spearheaded significant transitions for major financial institutions. My stint as a Research Intern at IIT Delhi's Programme in Autonomous Robotics saw me engineer a semi-autonomous mobile robot with advanced features like live video surveillance and face recognition.
 
-I am passionate about developing and contributing to <b>open-source softwares</b> and <b>robotics</b>, and my primary interest lies in field of <b>Perception</b>, <b>Robot Learning</b>, <b>Autonomous Robots</b> and <b>Software Development</b>. As a student at the University of Pennsylvania, I have honed my skills in the field through rigorous coursework and hands-on projects. I am eager to apply my knowledge and experience to real-world applications through an internship opportunity. I am a diligent worker who is committed to working wisely and persistently to achieve my objectives.
+My projects, ranging from stereo visual odometry to fusing LiDAR and Radar measurements, stand testament to my passion for robotics and deep learning. I'm proficient in programming languages like C++, Python, and JAVA and have a strong grasp of tools and frameworks such as Git/GitHub, Docker, ROS, OpenCV, PyTorch, and TensorFlow, to name a few.
 
-<!-- I intend to focus my robotics career on the entrepreneurship/innovation track while participating in the software engineering team. -->
+Outside the technical realm, I'm an ardent advocate for networking and collaboration. I cherish interactions with peers who resonate with my passion for the field. Beyond work and studies, I'm an avid sports enthusiast and traveler, always seeking new experiences and perspectives.
 
-In addition to my academic pursuits, I am a highly motivated individual with a passion for connecting with like-minded individuals in the field. Outside of my studies, I enjoy participating in sports and traveling to expand my perspective and gain new experiences. I am always open to building connections with others who share similar interests and believe that through collaboration we can achieve mutual growth and success.
-
-If our goals and passions align, I welcome the opportunity to connect and collaborate with you!
-
-<!-- As a CS Professional and a ROBO grad student, my primary interest lies in field of Autonomous Robots, Computer Vision, Machine Learning and Software Development. I designed and developed a semi-autonomous mobile robot from scratch during my undergrad, wherein I worked on the mechanical, electrical and computational aspects of a mobile robot. I hope to develop more robust solutions for mobile robots enabling them to accomplish a variety of tasks. Whether for work or pleasure, I enjoy exploring ideas that leverage technology to enhance people's lives. -->
+In a nutshell, I represent a synergy of academic depth and industry acumen. I'm driven by challenges and the zeal to innovate. If my journey resonates with you, I'm eager to connect and explore collaborative opportunities. Together, we can pave the way for mutual growth and success!
