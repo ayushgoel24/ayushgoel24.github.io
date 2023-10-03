@@ -1,5 +1,5 @@
 ---
-position: '1'
+position: '3'
 title: 'Dynamic Obstacle avoidance for Self-Driving Car'
 cover: './cover.png'
 github: 'https://github.com/ayushgoel24/DynamicObstacleAvoidance'
