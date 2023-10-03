@@ -4,7 +4,7 @@ title: 'Senior Software Development Engineer'
 company: 'Unicommerce eSolutions Pvt. Ltd.'
 shortname: 'Unicommerce'
 location: 'Gurugram, Haryana'
-range: 'Aug 2019 - Present'
+range: 'Aug 2019 - July 2022'
 logo: 'logo.png'
 tech:
   - Spring Boot
