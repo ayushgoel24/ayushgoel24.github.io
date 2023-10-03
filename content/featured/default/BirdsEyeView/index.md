@@ -1,5 +1,5 @@
 ---
-position: '2'
+position: '4'
 title: "Bird's Eye View using Egocentric RGB images"
 cover: './cover.png'
 github: 'https://github.com/ayushgoel24/BirdsEyeView'
