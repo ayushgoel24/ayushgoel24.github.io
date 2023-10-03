@@ -1,11 +1,11 @@
 ---
 title: 'Hi, my name is'
 name: 'Ayush Goel'
-subtitle: 'Robotics | Perception | Robot Learning'
+subtitle: 'Robotics Student, Software Engineer, and Lifelong Learner'
 buttonText: 'Connect with Me!'
 ---
 
-I am a graduate student studying Robotics Engineering from University of Pennsylvania, specializing in Perception and Robot Learning.
+Robotics student at the University of Pennsylvania with extensive software engineering experience across global roles. Passionate about Robotics, Perception, Deep Learning, and fostering meaningful collaborations in tech.
 
 <!-- I'm an India based developer with a goal-driven creative mindset and passion for learning and innovating.
 
