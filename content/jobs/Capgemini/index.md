@@ -18,6 +18,6 @@ tech:
 showInExperience: true
 ---
 
-- Upgraded the financial services web application of CIMB Bank, Malaysia by developing a banking project in a team of 10 to convert SOAP APIs to REST APIs.
+- Architected and led a strategic initiative at CIMB Bank, Malaysia, where, as a key member of a 10-person team, we transitioned from legacy SOAP APIs to modern RESTful APIs, optimizing the performance and scalability of the bank's financial services web application.
 
-- Planned and headed the development of Capbook, a social media web application developed using AngularJS and Spring Framework, used by over 500 employees.
+- Spearheaded the design, development, and deployment of "Capbook", an enterprise social media web platform. Utilized cutting-edge technologies like React and the Spring Framework, the platform garnered rapid adoption and is now actively used by over 500 employees, fostering enhanced collaboration and internal communication.
