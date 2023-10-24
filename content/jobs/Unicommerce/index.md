@@ -20,7 +20,31 @@ url: 'https://unicommerce.com/'
 showInExperience: true
 ---
 
-- Responsible and decision-maker of critical deliverables for high & low-level design changes and ensuring robust end-to-end architecture of the platform.
+- Architected and dictated high & low-level design modifications, ensuring a cohesive, robust, and scalable end-to-end system architecture.
+
+- Spearheaded a team of Software Engineers as a Team Lead, consistently delivering high-quality software solutions, surpassing business deliverables by 50% each sprint.
+
+- Steered the design, evolution, and upkeep of a proprietary DSL (Domain-Specific Language) tailored for streamlined partner system integrations.
+
+- Crafted an advanced Integration Proxy layer, ensuring seamless synchronous and asynchronous interactions with diverse logistic, omni-channel, and partner ecosystems.
+
+- Championed the strategic integration of international marketplaces, notably Lazada and Shopee, expanding the company's footprint across seven key Middle Eastern markets.
+
+- Optimized infrastructure costs by reengineering system integrations for maximum bandwidth efficiency. Pioneered the adoption of both residential and datacenter proxies, introducing strategies like load distribution, IP-rotation, and failover mechanisms, resulting in a 25% cost savings.
+
+- Devised the Control Pane—an in-house optimization tool—equipping Biz and L1 OPS teams with capabilities such as dynamic configuration management, CDC event retriggering, on-the-fly partner webhook calls, and seamless staging-to-production transitions.
+
+- Mitigated operational overhead by 25% through the roll-out of intuitive self-service controls, significantly diminishing the volume of on-call support tickets.
+
+- Fostered strategic collaborations by actively engaging in dialogues with Engineering and Business stalwarts, shaping the product and engineering trajectory.
+
+- Championed Agile methodologies, integrating DevOps practices, which resulted in faster release cycles and bolstered collaboration between development and operations teams.
+
+- Conducted periodic code reviews and orchestrated pair programming sessions, establishing coding standards and elevating code quality across the team.
+
+- Championed the adoption of containerization, leveraging tools like Docker and Kubernetes, which improved application portability and resource utilization.
+<!-- - Responsible and decision-maker of critical deliverables for high & low-level design changes and ensuring robust end-to-end architecture of the platform.
+
 
 - Mentored and managed a team of Software Engineers and ensured shipping of high-quality products and services, thereby fulfilling 80% more business requirements per sprint.
 
@@ -36,7 +60,7 @@ showInExperience: true
 
 - Regular discussions with Engineering and Business leaders for product and engineering roadmap.
 
-- Reduced the on call tickets count by implementing managed self service controls for OPS and L1 support.
+- Reduced the on call tickets count by implementing managed self service controls for OPS and L1 support. -->
 
 - Awards: [Above and Beyond Call of Duty (ABCD)](https://drive.google.com/file/d/1xgKIAVraP0RhYsb5UGyhXkY3AKG9msAN/view)
 <!--
