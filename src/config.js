@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: 'Ayush Goel - My Home Page',
   siteDescription:
-    'Ayush Goel is a Senior Software Development Engineer at Unicommerce eSolutions Pvt. Ltd., who loves learning new things and helping tech beginners.',
+    'Ayush Goel:Robotics student at the University of Pennsylvania with extensive software engineering experience across global roles. Passionate about Robotics, Perception, Deep Learning, and fostering meaningful collaborations in tech.',
   siteKeywords:
     'Ayush Goel, Ayush, Goel, ayushgoel24, software engineer, robots, opencv, computer vision, unicommerce, robomuse, perception, sensors, university of pennsylvania, upenn, masters, grasp',
   siteUrl: 'https://ayushgoel24.github.io/',
@@ -24,8 +24,8 @@ module.exports = {
     },
     {
       name: 'LeetCode',
-      url: 'https://leetcode.com/AyushGoel24/'
-    }
+      url: 'https://leetcode.com/AyushGoel24/',
+    },
   ],
 
   profileToNavLinks: {
@@ -99,11 +99,11 @@ module.exports = {
   profileToOtherProfileLinks: {
     '': {
       message: 'See my Perception profile',
-      link: '/'
+      link: '/',
     },
     sde: {
       message: 'See my Software profile',
-      link: '/sde'
+      link: '/sde',
     },
   },
 
