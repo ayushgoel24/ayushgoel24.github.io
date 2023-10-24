@@ -18,10 +18,10 @@ tech:
 showInExperience: true
 ---
 
-- Developed mobile robot capable of moving autonomously in a pre-defined path or being operated remotely.
+- Spearheaded the end-to-end design and development of a cutting-edge semi-autonomous mobile robot with remote operation capabilities and predefined autonomous path navigation.
 
-- Worked on CAD design, stress analysis, component selection, Odometry, PID control, and GUI development of the robot. Developed and installed a 4 DoF Robotic arm with a payload capacity of 300 gm.
-<!--
-- Project on developing a fully working dynamic eCommerce website using PHP and MySQL.
-- Prepared a complete report about the specifications and working of the software.
-- View [PROJECT REPORT](https://drive.google.com/file/d/1Cn6gxJ1UYpcdz97FivBBp-SsXiVbgg5-/view?usp=sharing) and [CERTIFICATE](https://drive.google.com/file/d/1R1in-IgfDj9qx9btWEeA_9Ob3db-54_c/view?usp=sharing) -->
+- Integrated advanced obstacle detection, face recognition, and interactive features, empowering the robot to effectively avoid barriers and recognize and engage with humans via an intuitive touchscreen interface and audio feedback.
+
+- Executed a comprehensive range of engineering tasks, including CAD modeling, stress analysis, precision component selection, and odometry. Leveraged expertise in PID control systems for enhanced robot stability and navigation.
+
+- Demonstrated adeptness in PCB design, graphical user interface (GUI) development, and intricate programming, ensuring seamless and integrated operation of all robot components.
