@@ -1,9 +1,9 @@
 ---
-position: '2'
-title: 'Amazon Web Services'
+position: '3'
+title: 'Event-Driven Microservice Design: Optimizing Event Routing with AWS EventBridge and SQS'
 cover: './cover.png'
 # covergif: '/proxy.gif'
-# github: 'https://github.com/ayushgoel24/AugmentedReality'
+github: 'https://github.com/ayushgoel24/Event-Driven-Microservice-Design-Optimizing-Event-Routing-with-AWS-EventBridge-and-SQS'
 # externel: 'https://drive.google.com/drive/folders/1HHLG4bSHwsTmPKq3t3DEs7kCbRr43fml?usp=share_link'
 tech:
   - AWS EventBridge
@@ -17,6 +17,8 @@ covergifs:
   - /augmented_reality.gif
 ---
 
-- Integrated EventBridge to receive events from downstream systems and route the events based on some rule to a target Simple Queue Service (SQS).<br/><br/>
+- Formulated and launched an event-driven microservice architecture using AWS EventBridge, intercepting and routing events seamlessly from downstream systems to target SQS queues.<br/><br/>
 
-- Used CloudWatch metrics to monitor the health of the various SQSs and notify on critical events.
+- The strategic architectural enhancement led to a 25% reduction in API calls, boosting system efficiency by 30%.<br/><br/>
+
+- Incorporated CloudWatch metrics for real-time monitoring of the health and performance of various SQS instances, guaranteeing proactive notifications and rapid responses to critical system events.
